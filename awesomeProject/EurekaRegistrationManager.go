@@ -14,10 +14,10 @@ import (
 Below is the format required by Eureka to register and application instance
 {
     "instance": {
-        "hostName": "WKS-SOF-L011",
-        "app": "com.automationrhapsody.eureka.app",
-        "vipAddress": "com.automationrhapsody.eureka.app",
-        "secureVipAddress": "com.automationrhapsody.eureka.app"
+        "hostName": "MY_HOSTNAME",
+        "app": "org.github.hellosatish.microservicepattern.awesomeproject",
+        "vipAddress": "org.github.hellosatish.microservicepattern.awesomeproject",
+        "secureVipAddress": "org.github.hellosatish.microservicepattern.awesomeproject"
         "ipAddr": "10.0.0.10",
         "status": "STARTING",
         "port": {"$": "8080", "@enabled": "true"},
