@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: central-doce-eureka-server
+server:
+  port: 8761
+logging:
+  level:
+    com.netflix.eureka: false
+    com.netflix.discovery: false
+    
+    
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
