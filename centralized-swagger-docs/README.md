@@ -10,7 +10,7 @@ As we already know, it is very easy to document REST applications using the Spri
 ##  This repositry contain below projects
 
 * **central-docs-eureka-server:** Service registry powered by Netflix Eureka
-* **employee-application** and **person-application:** REST applications with Swagger-UI enabled. You can follow [this article] (https://dzone.com/articles/monitoring-using-spring-boot-2-prometheus-amp-graf)for a step-by-step guide.
+* **employee-application** and **person-application:** REST applications with Swagger-UI enabled. You can follow [this article] (https://dzone.com/articles/monitoring-using-spring-boot-2-prometheus-amp-graf) for a step-by-step guide.
 * **documentation-service:** Spring Boot-based REST application consolidating all the Swagger JSON and offering it in a single endpoint.  Please note that this component can be part of a gateway or the registry itself, but I have chosen to keep it separate. The final documentation shall be available at http://localhost:9093/swagger-ui.html.
 
 
