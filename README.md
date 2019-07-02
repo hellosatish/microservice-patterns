@@ -6,6 +6,7 @@ Below are the projects description
 But, in case of microservices where you have multiple application and each exposes swagger document. This project is aimed at how do you consolidate all these swagger documents and expose them at one place. 
 ```
 Please note this implementation is specific to swagger-api and spring boot. However you can implement the same design in any language and tool
+
 ```.
 
 3. [vehicle-tracker](https://github.com/hellosatish/microservice-patterns/tree/master/vehicle-tracker) : An example of evnt based microservices. In this case we target real time event processing using [kafka-stream](https://kafka.apache.org/documentation/streams/) and spring boot. 
