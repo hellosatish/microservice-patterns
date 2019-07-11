@@ -19,7 +19,8 @@
 	<dependencies>
 		
 	</dependencies>
-
+	<!-- commenting below <build> as not required for this module -->
+<!--
 	<build>
 		<plugins>
 			<plugin>
@@ -28,5 +29,6 @@
 			</plugin>
 		</plugins>
 	</build>
+-->
 
 </project>
