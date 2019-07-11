@@ -35,7 +35,7 @@ public class KafkaProducer implements ProducerService {
 	@Override
 	public void produce(String key, String message) {
 		log.debug("Sending message : {}", message);
-		this.kafkaTemplate.send(topicName, message);
+//		this.kafkaTemplate.send(topicName, message);
 	}
 
 	@Override
