@@ -31,38 +31,35 @@ public class CarSignalSimulator implements SimulationService {
 		initialiseLocations();
 	}
 
+	@Async
 	@Override
 	public void simulate(int vehicleId, int emitInterval, int stopIndex) {
-	 simulateVehicleMovement(vehicleId, emitInterval, stopIndex);
-	}
-	
-	@Async
-	 public void simulateVehicleMovement(int vehicleId,int emitInterval, int stopIndex) {
-			int ctr =0;
-				for(short i =0 ; i < availbleLocations.size() ; i++){
-					ctr++;
-					if (ctr == stopIndex) {
-						emmitOfflineSignal(vehicleId,availbleLocations.get(i));
-						addSleep(emitInterval*1000);
-					}
+
+		int ctr =0;
+			for(short i =0 ; i < availbleLocations.size() ; i++){
+				ctr++;
+				if (ctr == stopIndex) {
+					emmitOfflineSignal(vehicleId,availbleLocations.get(i));
+					addSleep(emitInterval*1000);
+				}
+				emitSignal(vehicleId,availbleLocations.get(i));
+				if(i >= availbleLocations.size()-1) {
+					i--;
+					ctr =0;
 					emitSignal(vehicleId,availbleLocations.get(i));
-					if(i >= availbleLocations.size()-1) {
-						i--;
-						ctr =0;
-						emitSignal(vehicleId,availbleLocations.get(i));
-						for(;i>0 ;i--) {
-							ctr++;
-							if (ctr == stopIndex) {
-								emmitOfflineSignal(vehicleId,availbleLocations.get(i));
-								addSleep(emitInterval*1000);
-							}
-							emitSignal(vehicleId,availbleLocations.get(i));
+					for(;i>0 ;i--) {
+						ctr++;
+						if (ctr == stopIndex) {
+							emmitOfflineSignal(vehicleId,availbleLocations.get(i));
+							addSleep(emitInterval*1000);
 						}
+						emitSignal(vehicleId,availbleLocations.get(i));
 					}
 				}
-				log.info("------------------------ Loop Ended ------------------------ ");
-			//	return CompletableFuture.completedFuture("DONE");
-	 }
+			}
+			log.info("------------------------ Loop Ended ------------------------ ");
+		//	return CompletableFuture.completedFuture("DONE");
+	}
 	
 	private void emitSignal(int vehicleId, VehicleLocation location) {
 		log.info("Vehicle Id : {}  GPS : {}", vehicleId, location);
