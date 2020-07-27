@@ -12,3 +12,4 @@ The [documentation-app](https://github.com/hellosatish/microservice-patterns/tre
 3. [vehicle-tracker](https://github.com/hellosatish/microservice-patterns/tree/master/vehicle-tracker) : An example of evnt based microservices. In this case we target real time event processing using [kafka-stream](https://kafka.apache.org/documentation/streams/) and spring boot. 
 
 4. [micro-frameworks](https://github.com/hellosatish/microservice-patterns/tree/master/micro-frameworks) : Playground with micro-frameworks for java
+5. [IDOR Prevention](https://github.com/hellosatish/microservice-patterns/tree/master/idor-prevention) : An sample API demonstrating, one of the IDOR prevention strategy.
